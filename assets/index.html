@@ -87,6 +87,16 @@
       document.getElementById("demo10").innerHTML=text2.replace("Microsoft","Visual");
       }
      </script>
+     <h2>The slice() Method</h2>
+
+     <p>Extract a part of a string from position 15:</p>
+     <p id="demo20"></p>
+     
+     <script>
+     let text6 = "Apple, Banana, Kiwi, Water, Milk";
+     let part = text6.slice(15)
+     document.getElementById("demo20").innerHTML = part;
+     </script>
      <h2>The includes() Method</h2>
 
      <p>Check if a string includes "world" starting from position 12:</p>
@@ -132,6 +142,34 @@
       document.getElementById("demo17").innerHTML=Total;
      </script>
      <h2>UL LI method</h2>
+     <p id="demo18"></p>
+     <script>
+      let header="Templates Literals";
+      let tags=["banana","coffee","apple","milk"];
+      let html=`<h2>${header}</h2><ul>`;
+         for( const x of tags){
+            html+=`<li>${x}</li>`;
+         }
+      html+=`</ul>`;
+      document.getElementById("demo18").innerHTML=html;
+     </script>
+     <h1>JavaScript Numbers</h1>
+
+     <p>The toString() method can output numbers from base 2 to 36:</p>
      
+     <p id="demo19"></p>
+     <script>
+      let myNumber=32;
+      document.getElementById("demo19").innerHTML=
+         "Decimal 32 = " + "<br><br>" + 
+
+   "Hexatrigesimal (base 36): " + myNumber.toString(36) + "<br>" +
+   "Duotrigesimal (base 32): " + myNumber.toString(32) + "<br>" +
+   "Hexadecimal (base 16): " + myNumber.toString(16) + "<br>" +
+   "Duodecimal (base 12): " + myNumber.toString(12) + "<br>" +
+   "Decimal (base 10): " + myNumber.toString(10) + "<br>" +
+   "Octal (base 8): " + myNumber.toString(8) + "<br>" +
+   "Binary (base 2): " + myNumber.toString(2);
+     </script>
 </body>
 </html>
