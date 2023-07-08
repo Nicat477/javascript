@@ -87,5 +87,43 @@
       document.getElementById("demo10").innerHTML=text2.replace("Microsoft","Visual");
       }
      </script>
+     <h2>The includes() Method</h2>
+
+     <p>Check if a string includes "world" starting from position 12:</p>
+     <p id="demo11"></p>
+     <p id="demo12"></p>
+     <p id="demo13"></p>
+     <p id="demo14"></p>
+     <script>
+         let text3 = "Hello world, welcome to the universe.";
+         document.getElementById("demo11").innerHTML = text3.includes("world", 12);
+         document.getElementById("demo12").innerHTML = text3.startsWith("Hello");
+         document.getElementById("demo13").innerHTML = text3.endsWith("universe.");
+         document.getElementById("demo14").innerHTML = text3.endsWith("world", 11);
+     </script>
+     <h1>JavaScript Template Literals</h2>
+
+     <p>Template literals allows multiline strings:</p>
+     
+     <p id="demo15"></p>
+     <p id="demo16"></p>
+     
+     <script>
+      let text4=
+      `Taxi
+      Academy
+      1 
+      is
+      years 
+      old`;
+      let f="Nicat";
+      let s="Rzazade";
+      let text5=`My name: ${f} ${s}`;
+      document.getElementById("demo15").innerHTML = text4;
+      document.getElementById("demo16").innerHTML = text5;
+     </script>
+     <h2>Template literals allows variables in strings:</h2>
+
+     <p id="demo"></p>
 </body>
 </html>
