@@ -56,6 +56,36 @@
      let index = text.indexOf("'locate'");
      document.getElementById("demo5").innerHTML = index; 
      </script>
+     <h2>The length Property</h2>
+
+     <p>The length of the string is:</p>
+     <p id="demo6"></p>
+     <script>
+      let text1="ddhojisffjksfsf";
+      document.getElementById("demo6").innerHTML=text1.length;
+     </script>
+     <h2>Never Create Strings as Objects</h2>
+     <p>Strings and objects cannot be safely compared.</p>
      
+     <p id="demo7"></p>
+     <p id="demo8"></p>
+     <p id="demo9"></p>
+     <script>
+      let a="John";
+      let b=new String("John");
+      let n=new String("John");
+      document.getElementById("demo7").innerHTML=(a==b);
+      document.getElementById("demo8").innerHTML=(a===b);
+      document.getElementById("demo9").innerHTML = (b==n);
+     </script>
+     <h2>Replace "Microsoft" with "Visual" in the paragraph below:</h2>
+     <button onclick="myFunction()">Try it</button>
+     <p id="demo10">Please visit Microsoft!</p>
+     <script>
+      function myFunction() {
+      let text2=document.getElementById("demo10").innerHTML;
+      document.getElementById("demo10").innerHTML=text2.replace("Microsoft","Visual");
+      }
+     </script>
 </body>
 </html>
