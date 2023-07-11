@@ -270,5 +270,38 @@
 <p>Create a new array by performing a function on each array element:</p>
 
 <p id="demo33"></p>
+<script>
+   const numbers1 = [45, 4, 9, 16, 25];
+   const numbers2 = numbers1.map(myFunction);
+   document.getElementById("demo33").innerHTML=numbers2;
+   function myFunction(value) {
+      return value * 2;
+   }
+</script>
+<h2>The reduce() Method</h2>
+
+<p>Find the sum of all numbers in an array:</p>
+
+<p id="demo34"></p>
+<script>
+      const numbers = [45, 4, 9, 16, 25];
+   let sum = numbers.reduce(myFunction);
+
+   document.getElementById("demo34").innerHTML = "The sum is " + sum;
+
+   function myFunction(total, value, index, array) {
+   return total + value;
+   }
+</script>
+<h2>The indexOf() Method</h2>
+
+<p id="demo35"></p>
+
+<script>
+const fruits1 = ["Apple", "Orange", "Apple", "Mango"];
+let position = fruits1.indexOf("Apple") + 1;
+
+document.getElementById("demo35").innerHTML = "Apple is found in position " + position;
+</script>
 </body>
 </html>
