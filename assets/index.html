@@ -182,5 +182,43 @@
    document.getElementById("demo21").innerHTML=z.toString()+"<br>"+(123).toString()+"<br>"+(100+23).toString();
    document.getElementById("demo22").innerHTML=z1.toFixed(0)+"<br>"+z1.toFixed(2)+"<br>"+z1.toFixed(4);
 </script>
+<h2>The parseInt() Method</h2>
+
+<p>Number.parseInt() converts strings to whole numbers:</p>
+
+<p id="demo23"></p>
+<script>
+   document.getElementById("demo23").innerHTML=Number.parseInt("10.33")+"<br>"+Number.parseInt("10 20 30")+"<br>"+Number.parseInt("10")+"<br>"+Number.parseInt("10 years")+"<br>"+Number.parseInt("years 10");
+</script>
+<h1>JavaScript Arrays</h1>
+
+<p id="demo24"></p>
+<script>
+   const car=[];
+   car[0]="VOLVO";
+   car[1]="BMW";
+   car[2]="Mercedes;"
+   car.push("Lada");
+   document.getElementById("demo24").innerHTML=car;
+</script>
+<h1>JavaScript Objects</h1>
+
+<p>JavaScript uses names to access object properties.</p>
+<p id="demo25"></p>
+<script>
+   const perso={firstname:"Nicat",secondname:"Rzazade",years:"19"};
+   document.getElementById("demo25").innerHTML=perso.firstname+" "+perso.secondname+" is "+perso.years+" years old.";
+</script>
+<h2>The shift() Method</h2>
+
+<p>The shift() method removes the first element of an array (and "shifts" the other elements to the left):</p>
+<p id="demo26"></p>
+<p id="demo27"></p>
+<script>
+      const fruits = ["Banana", "Orange", "Apple", "Mango"];
+   document.getElementById("demo26").innerHTML = fruits;
+   fruits.shift();
+   document.getElementById("demo27").innerHTML = fruits;
+</script>
 </body>
 </html>
