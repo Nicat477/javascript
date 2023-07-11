@@ -212,13 +212,63 @@
 <h2>The shift() Method</h2>
 
 <p>The shift() method removes the first element of an array (and "shifts" the other elements to the left):</p>
+<h2>The concat() Method</h2>
+
+<p>The concat() method merges (concatenates) arrays:</p>
 <p id="demo26"></p>
 <p id="demo27"></p>
+<p id="demo28"></p>
+<p id="demo29"></p>
 <script>
       const fruits = ["Banana", "Orange", "Apple", "Mango"];
    document.getElementById("demo26").innerHTML = fruits;
    fruits.shift();
    document.getElementById("demo27").innerHTML = fruits;
+      const myGirls = ["Cecilie", "Lone"];
+   const myBoys = ["Emil", "Tobias", "Linus"];
+   const myChildren = myGirls.concat(myBoys);
+   const citrus = myChildren.slice(2);
+   document.getElementById("demo28").innerHTML = myChildren;
+   document.getElementById("demo29").innerHTML = citrus;
 </script>
+<h2>The sort() Method</h2>
+
+<p>Sort the array in ascending order:</p>
+
+<p id="demo30"></p>
+<p id="demo31"></p>
+<script>
+   const points = [40, 100, 1, 5, 25, 10];
+   document.getElementById("demo30").innerHTML=points;
+   points.sort(function(a,b){return a-b});
+   document.getElementById("demo31").innerHTML=points;
+</script>
+<p>Sort car objects on age:</p>
+<button onclick="myFunction()">Sort</button>
+<p id="demo32"></p>
+<script>
+   const cars = [
+   {type:"Volvo", year:2016},
+   {type:"Saab", year:2001},
+   {type:"BMW", year:2010}
+   ];
+   displaycars();
+   function myFunction() {
+      cars.sort(function(a,b){return a.year-b.year});
+      displaycars();
+   }
+
+   function displaycars() {
+   document.getElementById("demo32").innerHTML =
+   cars[0].type + " " + cars[0].year + "<br>" +
+   cars[1].type + " " + cars[1].year + "<br>" +
+   cars[2].type + " " + cars[2].year;
+   }
+</script>
+<h2>The map() Method</h2>
+
+<p>Create a new array by performing a function on each array element:</p>
+
+<p id="demo33"></p>
 </body>
 </html>
