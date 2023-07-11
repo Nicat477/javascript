@@ -303,5 +303,33 @@ let position = fruits1.indexOf("Apple") + 1;
 
 document.getElementById("demo35").innerHTML = "Apple is found in position " + position;
 </script>
+<h2>The find() Method</h2>
+
+<p id="demo36"></p>
+
+<script>
+const numbers3 = [4, 9, 16, 25, 29];
+let first = numbers3.find(myFunction);
+
+document.getElementById("demo36").innerHTML = "First number over 18 is " + first;
+
+function myFunction(value, index, array) {
+  return value > 18;
+}
+</script>
+<h2>The entries() method</h2>
+
+<p>entries() returns an Array Iterator object with key/value pairs:</p>
+
+<p id="demo37"></p>
+
+<script>
+const fruits2 = ["Banana", "Orange", "Apple", "Mango"];
+const f1 = fruits2.entries();
+
+for (let x of f1) {
+  document.getElementById("demo37").innerHTML += x + "<br>";
+}
+</script>
 </body>
 </html>
